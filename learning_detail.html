@@ -1,0 +1,204 @@
+<html lang="kor">
+<head>
+    <title>라플라스-상위 1%를 위한 지름길</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--메타 : 메타 태그만 사용-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/tailwindcss.js"></script>
+</head>
+
+  <body>
+    <div class="wrap">
+        <!-- side : s -->
+        <div class="side_wrap">
+            <div class="header_logo">
+                <a href="#"><img src="images/logo.png" class="img_logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu active">
+                        <a href="schedule.html" class="depth_1"><span><img src="images/menu_ic_1.png"></span>스케줄</a>
+                    </li>
+                    <li class="menu">
+                        <a href="attendance_check.html" class="depth_1"><span><img src="images/menu_ic_2.png"></span>출석체크</a>
+                    </li>
+                    <li class="menu">
+                        <a href="schedule_management.html" class="depth_1"><span><img src="images/menu_ic_3.png"></span>학원 일정 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_4.png"></span>학생 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="freshman.html" class="active">신입 학생 정보 관리</a></li>
+                            <li><a href="student_list.html">학생 정보 관리</a></li>
+                            <li><a href="attendance_list.html">학생 출석/하원 내역</a></li>
+                            <li><a href="student_counseling.html">학생 상담 일지</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="payment.html" class="depth_1"><span><img src="images/menu_ic_5.png"></span>결제 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_6.png"></span>강사 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="instructor.html">강사 정보 관리</a></li>
+                            <li><a href="instructor_attendance.html">강사 출퇴근 내역</a></li>
+                            <li><a href="instructor_report.html">수업 진행 보고서 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_7.png"></span>학습 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="learning.html">학습 과정 관리</a></li>
+                            <li><a href="textbook.html">학습 교재 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_8.png"></span>통계 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="statistics_sales.html">매출 통계</a></li>
+                            <li><a href="statistics_student.html">학생 통계</a></li>
+                            <li><a href="statistics_progress.html">진도/내신 통계</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="admin_management.html" class="depth_1"><span><img src="images/menu_ic_9.png"></span>관리자 관리</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- side : e -->
+        <div class="main_wrap">
+            <header>
+                <span class="ease"><img src="images/btn_setting.png" class="header_btn" onclick="modal_open('password_change')"></span>
+                <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
+            </header>
+            <main>
+                <div class="column_36 w_1000">
+                    <div class="page_tit">상세</div>
+                    
+                    <table class="table_view">
+                        <colgroup>
+                            <col width="160">
+                            <col width="*">
+                            <col width="160">
+                            <col width="*">
+                        </colgroup>
+                        <tr>
+                            <th>학습 회차 선택</th>
+                            <td>01. 점, 선, 면 개념원리 이해- 핵심문제 익히기</td>
+                            <th>수업일자</th>
+                            <td>2025.02.01</td>
+                        </tr>
+                        <tr>
+                            <th>오늘의 학습주제</th>
+                            <td>핵심문제 익히기</td>
+                            <th>오늘의 학습목표</th>
+                            <td>개념원리 이해</td>
+                        </tr>
+                        <tr>
+                            <th>정규/보강/회차 미차감</th>
+                            <td>정규</td>
+                            <th>학습 평가</th>
+                            <td>상</td>
+                        </tr>
+                        <tr>
+                            <th>TEST(정답 / 전체)</th>
+                            <td>일일 테스트 / 맞은 갯 수 : 10 개 / 전체 갯 수 : 30 개</td>
+                            <th>학습 태도</th>
+                            <td>상</td>
+                        </tr>
+                        <tr>
+                            <th>집중도</th>
+                            <td>상</td>
+                            <th>개선해야 할 태도나 습관</th>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <th>부족했던 점</th>
+                            <td>내용</td>
+                            <th>학습 이슈</th>
+                            <td>없음</td>
+                        </tr>
+                        <tr>
+                            <th>학습 알림장</th>
+                            <td colspan="3">[김길동 학생 7월 29일 정규 수업 안내]<br>담당 강사: 김강사<br>
+                                학습 과정: 수학 3-1 개념원리 초등수학<br>안녕하세요, 학부모님.</td>
+                        </tr>
+                        <tr>
+                            <th>STEP UP1</th>
+                            <td>내용</td>
+                            <th>STEP UP12</th>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <th>지난 숙제</th>
+                            <td>이행</td>
+                            <th>오늘 숙제</th>
+                            <td>오답정리 [ 개념원리] P 101</td>
+                        </tr>
+                    </table>
+
+                </div>
+                
+
+            </main>
+        </div>
+    </div>
+
+    <!-- modal 비밀번호 변경 : s -->
+    <div class="modal md_sm modal_password_change">
+        <div class="modal_title">
+          <h4>비밀번호 변경</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('password_change')">
+        </div>
+        <div class="modal_container">
+            <ul class="input_ui">
+                <li>
+                    <label class="input_label">기존 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="기존 비밀번호를 입력해 주세요.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호 확인<span class="essential">*</span></label>
+                    <input type="password" placeholder="신규 비밀번호와 동일한 비밀번호를 입력.">
+                </li>
+                <li>
+                    <div class="modal_btn_wrap">
+                        <button class="btn_primary btn_lg">비밀번호 변경</button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_password_change" onclick="modal_close('password_change')"></div>
+    <!-- modal 비밀번호 변경 : s -->
+
+
+    </body>
+</html>

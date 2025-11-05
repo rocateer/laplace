@@ -1,0 +1,141 @@
+<html lang="kor">
+<head>
+    <title>라플라스-상위 1%를 위한 지름길</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--메타 : 메타 태그만 사용-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/tailwindcss.js"></script>
+</head>
+
+  <body>
+    <div class="wrap">
+        <div class="attend_wrap">
+            <div class="group_between">
+                <img src="images/logo.png" class="w_200">
+                <div class="txt_item_1">
+                    <b>강사</b> 출근 · 퇴근 / <b>학생</b> 출석 · 하원
+                </div>
+            </div>
+            <div class="txt_item_2">
+                입/퇴장 시 본인의 전화번호를 입력해 주세요.
+            </div>
+            <div class="keyboard_wrap">
+                <div class="number_key_wrap">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>6</button>
+                    <button>5</button>
+                    <button>4</button>
+                    <button>3</button>
+                    <button>2</button>
+                    <button>1</button>
+                    <button>010</button>
+                    <button>0</button>
+                    <button class="backspace"><img src="images/ic_backspace.png" class="ic_48"></button>
+                </div>
+                <div class="input_number">
+                    <div class="number"></div>
+                    <button class="clear"><img src="images/btn_delete_lg.png" class="ic_48"></button>
+                </div>
+                <div class="item_wrap w_100p">
+                    <button class="btn_primary">강사 출근 · 퇴근</button>
+                    <button class="btn_primary">학생 출석 · 하원</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+    const buttons = document.querySelectorAll('.number_key_wrap button');
+    const numberDisplay = document.querySelector('.input_number .number');
+    const clearButton = document.querySelector('.input_number .clear');
+    
+    let rawNumber = ''; // 하이픈 없는 실제 숫자만 저장
+
+    // 숫자 포맷 함수 (3-4-4)
+    function formatNumber(num) {
+        if (num.length <= 3) return num;
+        if (num.length <= 7) return num.slice(0, 3) + '-' + num.slice(3);
+        return num.slice(0, 3) + '-' + num.slice(3, 7) + '-' + num.slice(7, 11);
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+        if (btn.classList.contains('backspace')) {
+            rawNumber = rawNumber.slice(0, -1);
+        } else {
+            // 숫자만 입력 (11자리 제한)
+            if (rawNumber.length < 11) {
+            rawNumber += btn.textContent.replace(/[^0-9]/g, '');
+            }
+        }
+        numberDisplay.textContent = formatNumber(rawNumber);
+        });
+    });
+
+    // 전체 삭제 버튼
+    clearButton.addEventListener('click', () => {
+        rawNumber = '';
+        numberDisplay.textContent = '';
+    });
+    </script>
+
+    <!-- modal 비밀번호 변경 : s -->
+    <div class="modal md_sm modal_password_change">
+        <div class="modal_title">
+          <h4>비밀번호 변경</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('password_change')">
+        </div>
+        <div class="modal_container">
+            <ul class="input_ui">
+                <li>
+                    <label class="input_label">기존 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="기존 비밀번호를 입력해 주세요.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호 확인<span class="essential">*</span></label>
+                    <input type="password" placeholder="신규 비밀번호와 동일한 비밀번호를 입력.">
+                </li>
+                <li>
+                    <div class="modal_btn_wrap">
+                        <button class="btn_primary btn_lg">비밀번호 변경</button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_password_change" onclick="modal_close('password_change')"></div>
+    <!-- modal 비밀번호 변경 : s -->
+
+
+    </body>
+</html>

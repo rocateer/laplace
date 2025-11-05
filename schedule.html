@@ -1,0 +1,523 @@
+<html lang="kor">
+<head>
+    <title>라플라스-상위 1%를 위한 지름길</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--메타 : 메타 태그만 사용-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/tailwindcss.js"></script>
+</head>
+
+  <body>
+    <div class="wrap">
+        <!-- side : s -->
+        <div class="side_wrap">
+            <div class="header_logo">
+                <a href="#"><img src="images/logo.png" class="img_logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu active">
+                        <a href="schedule.html" class="depth_1"><span><img src="images/menu_ic_1.png"></span>스케줄</a>
+                    </li>
+                    <li class="menu">
+                        <a href="attendance_check.html" class="depth_1"><span><img src="images/menu_ic_2.png"></span>출석체크</a>
+                    </li>
+                    <li class="menu">
+                        <a href="schedule_management.html" class="depth_1"><span><img src="images/menu_ic_3.png"></span>학원 일정 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_4.png"></span>학생 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="freshman.html">신입 학생 정보 관리</a></li>
+                            <li><a href="student_list.html">학생 정보 관리</a></li>
+                            <li><a href="attendance_list.html">학생 출석/하원 내역</a></li>
+                            <li><a href="student_counseling.html">학생 상담 일지</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="payment.html" class="depth_1"><span><img src="images/menu_ic_5.png"></span>결제 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_6.png"></span>강사 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="instructor.html">강사 정보 관리</a></li>
+                            <li><a href="instructor_attendance.html">강사 출퇴근 내역</a></li>
+                            <li><a href="instructor_report.html">수업 진행 보고서 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_7.png"></span>학습 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="learning.html">학습 과정 관리</a></li>
+                            <li><a href="textbook.html">학습 교재 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_8.png"></span>통계 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="statistics_sales.html">매출 통계</a></li>
+                            <li><a href="statistics_student.html">학생 통계</a></li>
+                            <li><a href="statistics_progress.html">진도/내신 통계</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="admin_management.html" class="depth_1"><span><img src="images/menu_ic_9.png"></span>관리자 관리</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- side : e -->
+        <div class="main_wrap">
+            <header>
+                <span class="ease"><img src="images/btn_setting.png" class="header_btn" onclick="modal_open('password_change')"></span>
+                <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
+            </header>
+            <main>
+                <div class="column_36 w_1000">
+                    <!-- 최근 7일 수업 진행보고서:: 관리자만 보는 화면 입니다. : s -->
+                    <div class="report_state_wrap">
+                        <div><span class="tit">최근 7일 <br>수업 진행보고서</span></div>
+                        <div>
+                            <span class="item_date">25.09.01</span>
+                            <span class="item_count">5</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.02</span>
+                            <span class="item_count">3</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.03</span>
+                            <span class="item_count">4</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.04</span>
+                            <span class="item_count">5</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.05</span>
+                            <span class="item_count">4</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.06</span>
+                            <span class="item_count">5</span>
+                        </div>
+                        <div>
+                            <span class="item_date">25.09.07</span>
+                            <span class="item_count">5</span>
+                        </div>
+                    </div>
+                    <!-- 최근 7일 수업 진행보고서 : e -->
+
+                    <!-- 매일 수업 진행 보고서 작성 :: 강사만 보는 화면 입니다. : s -->
+                    <div class="top_btn_wrap">
+                        <div class="group_c">
+                            <div class="txt_1">마지막 보고서 작성일</div>
+                            <div class="txt_date">수업일 : 2025.05.01</div>
+                        </div>
+                        <a href="report_reg.html" class="btn_primary_line btn_lg">매일 수업 진행 보고서 작성</a>
+                    </div>
+                    <!-- 매일 수업 진행 보고서 작성: e -->
+
+                    <div class="min_list_wrap">
+                        <!-- 상담일지 : s -->
+                         <div>
+                            <div class="tit_bar">
+                                <img src="images/board_ic_1.png" class="ic_24"> 상담일지
+                            </div>
+                            <div class="min_list_body scroller">
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>김애란</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="counseling_freshman.html">신입생 상담</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">권형인</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="report_urgent_out.html">퇴원 예감 긴급 보고서</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">권형인</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="report_out.html">퇴원 보고서</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">은유</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="report_absent.html">결석 보고서</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">권형인</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="counseling_graduate.html">재원생 상담</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">권형인</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <a href="report_absent.html">결석 보고서</a>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">은유</span>
+                                        <span class="txt_date">08.23</span>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- 상담일지 : e -->
+
+                        <!-- 학원일정 : s -->
+                         <div>
+                            <div class="tit_bar">
+                                <img src="images/board_ic_2.png" class="ic_24"> 학원일정
+                            </div>
+                            <div class="min_list_body scroller">
+                                <div class="min_row pointer" onclick="modal_open('academy_sch')">
+                                    <div class="item_sm_wrap flex">
+                                        <span>함께 청소하는 날</span>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">2025.08.29 12:30</span>
+                                    </div>
+                                </div>
+                                <div class="min_row pointer" onclick="modal_open('academy_sch')">
+                                    <div class="item_sm_wrap flex">
+                                        <span>외부 상담 나가는 날</span>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">2025.08.29 12:30</span>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- 학원일정 : e -->
+
+                        <!-- 휴원 종료 예정자 : s -->
+                         <div>
+                            <div class="tit_bar">
+                                <img src="images/board_ic_3.png" class="ic_24"> 휴원 종료 예정자
+                            </div>
+                            <div class="min_list_body scroller">
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>김애란</span>
+                                        <span class="txt_line">|</span>
+                                        <span>초등3학년</span>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">2025.09.02</span>
+                                    </div>
+                                </div>
+                                <div class="min_row">
+                                    <div class="item_sm_wrap flex">
+                                        <span>한강</span>
+                                        <span class="txt_line">|</span>
+                                        <span>초등5학년</span>
+                                    </div>
+                                    <div>
+                                        <span class="txt_date">2025.09.02</span>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- 휴원 종료 예정자 : e -->
+                        
+                    </div>
+
+                    <div class="group_between">
+                        <div class="page_tit">스케줄</div>
+                        <div>
+                            <b>TODAY</b> 2025.08.05 (화)
+                        </div>
+                    </div>
+                    
+                    <!-- 스케줄 : s -->
+                     <div class="group_c_24">
+                        <div class="group_between">
+                            <div class="item_wrap">
+                                <select class="w_100 md">
+                                    <option>유재석</option>
+                                    <option>김승옥</option>
+                                </select>
+                                <select class="w_100 md">
+                                    <option>2025년</option>
+                                    <option>2024년</option>
+                                </select>
+                                <select class="w_100 md">
+                                    <option>7월</option>
+                                    <option>6월</option>
+                                </select>
+                                <button class="btn_primary btn_sm">검색</button>
+                            </div>
+                            <div class="item_wrap">
+                                <button class="btn_gray_line primary btn_sm"><img src="images/ic_check_sm.png" class="ic_16">이번주</button>
+                                <span class="line_v"></span>
+                                <button class="btn_gray_line btn_sm"><img src="images/arrow_prev.png" class="ic_16">이전</button>
+                                <button class="btn_gray_line btn_sm">다음<img src="images/arrow_next.png" class="ic_16"></button>
+                            </div>
+                        </div>
+
+                        <div class="schedule_wrap">
+                            <div class="sch_legend">
+                                <div class="item_wrap">
+                                    <span class="dot_1"></span>
+                                    신규
+                                </div>
+                                <div class="item_wrap">
+                                    <span class="dot_2"></span>
+                                    보강
+                                </div>
+                            </div>
+                            <div class="sch_head_wrap sch_ui">
+                                <div><b>수업<br>시작 시간</b></div>
+                                <div class="sch_item">
+                                    <b>Mon</b>
+                                    <div class="fs_12">(20일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Tue</b>
+                                    <div class="fs_12">(21일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Wed</b>
+                                    <div class="fs_12">(22일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Thu</b>
+                                    <div class="fs_12">(23일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Fir</b>
+                                    <div class="fs_12">(24일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Sat</b>
+                                    <div class="fs_12">(25일)</div>
+                                </div>
+                                <div class="sch_item">
+                                    <b>Sun</b>
+                                    <div class="fs_12">(26일)</div>
+                                </div>
+                            </div>
+                            <div class="sch_body">
+                                <div class="shc_tr sch_ui">
+                                    <div class="td_time">10:00</div>
+                                    <div class="sch_item">
+                                        <div class="item_total">인원 3 (남 2, 여 1)</div>
+                                        <a href="sch_student_detail.html" class="item_student">박소담 (E1) 서울<span class="dot_1"></span></a> <!-- 관리자 클릭 시 -->
+                                        <a href="sch_student_detail.html" class="item_student">이예린 (E1) 서울</a>
+                                        <a href="sch_student_detail.html" class="item_student">황영진 (E1) 인천</a>
+                                    </div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item pointer" onclick="modal_open('students_list')"> <!-- 강사 클릭 시 -->
+                                        <div class="item_total over">인원 6 (남 5, 여 1)</div>
+                                        <div class="item_student">박소담 (E1) 서울<span class="dot_2"></span></div>
+                                        <div class="item_student">이예린 (E1) 서울</div>
+                                    </div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item"></div>
+                                </div>
+                                <div class="shc_tr sch_ui">
+                                    <div class="td_time">11:00</div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item">
+                                        <div class="item_total">인원 3 (남 2, 여 1)</div>
+                                        <div class="item_student">박소담 (E1) 서울<span class="dot_1"></span></div>
+                                        <div class="item_student">이예린 (E1) 서울</div>
+                                        <div class="item_student">황영진 (E1) 인천</div>
+                                    </div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item">
+                                        <div class="item_total over">인원 6 (남 5, 여 1)</div>
+                                        <div class="item_student">박소담 (E1) 서울</div>
+                                        <div class="item_student">이예린 (E1) 서울</div>
+                                    </div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item"></div>
+                                    <div class="sch_item"></div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    <!-- 스케줄 : e -->
+                    
+                    
+                </div>
+                
+
+            </main>
+        </div>
+    </div>
+
+    <!-- modal 강사용 학생목록 : s -->
+    <div class="modal modal_students_list">
+        <div class="modal_title">
+          <h4>학생 목록</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('students_list')">
+        </div>
+        <div class="modal_container">
+            <div class="group_between">
+                <div class="group_c">
+                    <div class="item_sm_wrap">
+                        <div class="w_80 txt_1">수업일시</div>
+                        <div>2025.05.10 (월) 10:00</div>
+                    </div>
+                    <div class="item_sm_wrap">
+                        <div class="w_80 txt_1">학습과정</div>
+                        <div>개념원리 초등수학 3-1학기</div>
+                    </div>
+                </div>
+                <button class="btn_primary btn_sm">전체 출석</button>
+            </div>
+            <div class="group_c_8 md_student_list">
+                <div class="row">
+                    <a href="student_detail.html" class="item_wrap">박소담 (E1) 서울<span class="dot_2"></span><img src="images/arrow_next_sm.png" class="ic_16"></a>
+                    <div class="item_wrap">
+                        <button class="btn_gray_line btn_sm">출석</button>
+                        <button class="btn_gray_line btn_sm">지각</button>
+                        <button class="btn_gray_line btn_sm">결석</button>
+                        <button class="btn_primary_line btn_sm" disabled>학습일지 작성</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="student_detail.html" class="item_wrap">이예린 (E1) 서울<img src="images/arrow_next_sm.png" class="ic_16"></a>
+                    <div class="item_wrap">
+                        <button class="btn_gray_line btn_sm" disabled>출석</button>
+                        <button class="btn_gray_line btn_sm" disabled>지각</button>
+                        <button class="btn_gray_line btn_sm" disabled>결석</button>
+                        <button class="btn_primary_line btn_sm" onclick="window.open('learning_view.html','_blank','width=900, height=700, top=50, right=50, scrollbars=yes')">학습일지 작성</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_students_list" onclick="modal_close('students_list')"></div>
+    <!-- modal 강사용 학생목록 : s -->
+
+    <!-- modal 학원일정 일정 : s -->
+    <div class="modal modal_academy_sch">
+        <div class="modal_title">
+          <h4>학원일정 상세</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('academy_sch')">
+        </div>
+        <div class="modal_container">
+            <table class="table_view">
+                <colgroup>
+                    <col width="80">
+                    <col width="*">
+                    <col width="80">
+                    <col width="*">
+                </colgroup>
+                <tr>
+                    <th>일정 일시</th>
+                    <td colspan="3">2025.09.25 10:30</td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3">다같이 청소하는 날</td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td colspan="3">안녕하세요. 미화부 홍길동 입니다.<br>
+                        가을을 맞이하여 모두 다같이 청소하는 날입니다. <br>이른 아침이지만 모두 참석 부탁드려요<br><br>감사합니다.</td>
+                </tr>
+                <tr>
+                    <th>작성자</th>
+                    <td>홍길동</td>
+                    <th>작성일시</th>
+                    <td>2025.09.23 12:12</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_academy_sch" onclick="modal_close('academy_sch')"></div>
+    <!-- modal 학원일정 일정 : s -->
+
+    <!-- modal 비밀번호 변경 : s -->
+    <div class="modal md_sm modal_password_change">
+        <div class="modal_title">
+          <h4>비밀번호 변경</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('password_change')">
+        </div>
+        <div class="modal_container">
+            <ul class="input_ui">
+                <li>
+                    <label class="input_label">기존 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="기존 비밀번호를 입력해 주세요.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호 확인<span class="essential">*</span></label>
+                    <input type="password" placeholder="신규 비밀번호와 동일한 비밀번호를 입력.">
+                </li>
+                <li>
+                    <div class="modal_btn_wrap">
+                        <button class="btn_primary btn_lg">비밀번호 변경</button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_password_change" onclick="modal_close('password_change')"></div>
+    <!-- modal 비밀번호 변경 : s -->
+
+
+    </body>
+</html>

@@ -1,0 +1,441 @@
+<html lang="kor">
+<head>
+    <title>라플라스-상위 1%를 위한 지름길</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--메타 : 메타 태그만 사용-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/tailwindcss.js"></script>
+</head>
+
+  <body>
+    <div class="wrap">
+        <!-- side : s -->
+        <div class="side_wrap">
+            <div class="header_logo">
+                <a href="#"><img src="images/logo.png" class="img_logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu">
+                        <a href="schedule.html" class="depth_1"><span><img src="images/menu_ic_1.png"></span>스케줄</a>
+                    </li>
+                    <li class="menu">
+                        <a href="attendance_check.html" class="depth_1"><span><img src="images/menu_ic_2.png"></span>출석체크</a>
+                    </li>
+                    <li class="menu">
+                        <a href="schedule_management.html" class="depth_1"><span><img src="images/menu_ic_3.png"></span>학원 일정 관리</a>
+                    </li>
+                    <li class="menu active">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_4.png"></span>학생 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="freshman.html" class="active">신입 학생 정보 관리</a></li>
+                            <li><a href="student_list.html">학생 정보 관리</a></li>
+                            <li><a href="attendance_list.html">학생 출석/하원 내역</a></li>
+                            <li><a href="student_counseling.html">학생 상담 일지</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="payment.html" class="depth_1"><span><img src="images/menu_ic_5.png"></span>결제 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_6.png"></span>강사 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="instructor.html">강사 정보 관리</a></li>
+                            <li><a href="instructor_attendance.html">강사 출퇴근 내역</a></li>
+                            <li><a href="instructor_report.html">수업 진행 보고서 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_7.png"></span>학습 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="learning.html">학습 과정 관리</a></li>
+                            <li><a href="textbook.html">학습 교재 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_8.png"></span>통계 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="statistics_sales.html">매출 통계</a></li>
+                            <li><a href="statistics_student.html">학생 통계</a></li>
+                            <li><a href="statistics_progress.html">진도/내신 통계</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="admin_management.html" class="depth_1"><span><img src="images/menu_ic_9.png"></span>관리자 관리</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- side : e -->
+        <div class="main_wrap">
+            <header>
+                <span class="ease"><img src="images/btn_setting.png" class="header_btn" onclick="modal_open('password_change')"></span>
+                <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
+            </header>
+
+            <main>
+                <div class="column_36 w_1000">
+                    <div class="page_tit">학습 과정 상세</div>
+
+                    <table class="table_view">
+                        <colgroup>
+                            <col width="140">
+                            <col width="*">
+                            <col width="140">
+                            <col width="*">
+                        </colgroup>
+                        <tr>
+                            <th><label class="input_label">학습 과정</label></th>
+                            <td>수학 개념 탄탄 과정! 개념원리 3-1 집중 학습반</td>
+                            <th><label class="input_label">담당 강사</label></th>
+                            <td>김강사, 박보조, 최보조</td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">수업 시간</label></th>
+                            <td>[ 월, 화, 수, 목 ] 09:00 부터 3시간</td>
+                            <th><label class="input_label">강의 기간</label></th>
+                            <td>2025.05.01 ~ 2025.07.31</td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">교재비</label></th>
+                            <td colspan="3">진도서 : 수학 3-1 진도서 / 10,000 원<br>심화서: 수학 3-1 보조교재 / 10,000 원</td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">기본 회차(월 간)</label></th>
+                            <td>12 회차</td>
+                            <th><label class="input_label">학습 총 회차</label></th>
+                            <td>48 회차</td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">회차당 비용</label></th>
+                            <td>10,000 원</td>
+                            <th><label class="input_label">수업 시작일<span class="essential">*</span></label></th>
+                            <td>
+                                <div class="item_wrap">
+                                    <input type="text" class="input_calendar flex">
+                                    <button class="btn_primary btn_sm">저장</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">메모</label></th>
+                            <td colspan="3">
+                                <div class="item_wrap">
+                                    <textarea class="flex">에디터 삽입</textarea>
+                                    <button class="btn_primary btn_sm">저장</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <div class="table_wrap scroller_x">
+                        <table class="table_list">
+                            <thead>
+                                <tr>
+                                    <th class="w_80">대상 월</th>
+                                    <th class="w_80">기본회차</th>
+                                    <th class="w_80">잔여회차</th>
+                                    <th class="w_100">전월 추가<br>회차</th>
+                                    <th class="w_100">회차당 비용</th>
+                                    <th class="w_100">기본 수강료</th>
+                                    <th class="w_100">월 문제은행<br>이용료</th>
+                                    <th class="w_100">교재비</th>
+                                    <th class="w_100">스텝업 교재 비용</th>
+                                    <th class="w_100">전월 추가<br>회차 비용</th>
+                                    <th class="w_100">총 결제<br>예상 금액</th>
+                                    <th class="w_100">할인 금액</th>
+                                    <th class="w_200">결제 금액</th>
+                                    <th class="w_100">미납 금액</th>
+                                    <th class="w_100">결제 상태</th>
+                                    <th class="w_100">환불 비용</th>
+                                    <th class="w_100">환불 일자</th>
+                                    <th class="w_100"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25.05</td>
+                                    <td>12</td>
+                                    <td>7</td>
+                                    <td>10,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>30,000</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>190,000</td>
+                                    <td><span class="chip_4">결제 요청</span></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><button class="btn_gray_line btn_xs btn_more" onclick="modal_open('payment')">결제</button></td>
+                                </tr>
+                                <tr>
+                                    <td>25.05</td>
+                                    <td>12</td>
+                                    <td>7</td>
+                                    <td>10,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>30,000</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>100,000 / 개인 / 결제 선생 / 2025.01.01</td>
+                                    <td>0</td>
+                                    <td><span class="chip_1">결제 완료</span></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><button class="btn_gray_line btn_xs btn_more" onclick="modal_open('refund')">환불</button></td>
+                                </tr>
+                                <tr>
+                                    <td>25.05</td>
+                                    <td>12</td>
+                                    <td>7</td>
+                                    <td>10,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>120,000</td>
+                                    <td>30,000</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>120,000</td>
+                                    <td>0</td>
+                                    <td>100,000 / 개인 / 결제 선생 / 2025.01.01</td>
+                                    <td>0</td>
+                                    <td><span class="chip_2">미요청</span></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><button class="btn_gray_line btn_xs btn_more">결제 요청</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                    <div class="btn_bottom">
+                        <button class="btn_gray_line btn_lg">이전</button>
+                        <button class="btn_gray_line btn_lg">삭제</button>
+                    </div>
+                </div>
+                
+
+            </main>
+        </div>
+    </div>
+
+    
+    <!-- modal 결제 : s -->
+    <div class="modal modal_payment">
+        <div class="modal_title">
+          <h4>결제</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('payment')">
+        </div>
+        <div class="modal_container">
+            <div class="payment_pop_info">
+                <p class="txt_2">2025.05 월 수강료</p>
+                <p class="txt_2">학습과정 : 수학 개념 탄탄 과정! 개념원리 301 집중 학습반</p>
+                <p class="fs_18">총 결제 예상금액 : 140,000 원</p>
+            </div>
+            <ul class="input_ui mt20">
+                <li>
+                    <label class="input_label">결제일<span class="essential">*</span></label>
+                    <input type="text" class="input_calendar w_200">
+                </li>
+                <li>
+                    <label class="input_label">결제 유형<span class="essential">*</span></label>
+                    <div class="col_16">
+                        <div>
+                            <input type="radio" name="type" id="type_1" value="Y">
+                            <label for="type_1"><span></span>결제선생</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="type" id="type_2" value="Y">
+                            <label for="type_2"><span></span>카드</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="type" id="type_3" value="Y">
+                            <label for="type_3"><span></span>현금</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="type" id="type_4" value="Y">
+                            <label for="type_4"><span></span>무통장입금</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="col_36">
+                    <div class="flex group_c">
+                        <label class="input_label">결제 금액<span class="essential">*</span></label>
+                        <input type="text" >
+                    </div>
+                    <div class="flex group_c">
+                        <label class="input_label">할인 금액</label>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <label class="input_label">매출 구분<span class="essential">*</span></label>
+                    <div class="col_16">
+                        <div>
+                            <input type="radio" name="sort" id="sort_1" value="Y">
+                            <label for="sort_1"><span></span>개인</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sort" id="sort_2" value="Y">
+                            <label for="sort_2"><span></span>법인</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sort" id="sort_3" value="Y">
+                            <label for="sort_3"><span></span>라플라스 북스</label>
+                        </div>
+                    </div>
+                </li>
+
+                <hr>
+            </ul>
+            <div class="modal_btn_wrap">
+                <button class="btn_primary btn_lg">결제 완료</button>
+            </div>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_payment" onclick="modal_close('payment')"></div>
+    <!-- modal 결제 : e -->
+
+    <!-- modal 환불 : s -->
+    <div class="modal modal_refund">
+        <div class="modal_title">
+          <h4>환불</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('refund')">
+        </div>
+        <div class="modal_container">
+            <div class="payment_pop_info">
+                <p class="txt_2">2025.05 월 수강료</p>
+                <p class="txt_2">학습과정 : 수학 개념 탄탄 과정! 개념원리 301 집중 학습반</p>
+                <p class="fs_18">총 결제 예상금액 : 140,000 원</p>
+            </div>
+            <ul class="input_ui mt20">
+                
+                <li class="col_36">
+                    <div class="flex group_c">
+                        <label class="input_label">환불일<span class="essential">*</span></label>
+                        <input type="password" class="input_calendar">
+                    </div>
+                    <div class="flex group_c">
+                        <label class="input_label">환불 금액<span class="essential">*</span></label>
+                        <input type="text">
+                    </div>
+                </li>
+
+                <hr>
+            </ul>
+            <div class="modal_btn_wrap">
+                <button class="btn_primary btn_lg">환불 완료</button>
+            </div>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_refund" onclick="modal_close('refund')"></div>
+    <!-- modal 환불 : e -->
+
+
+
+    <!-- modal 비밀번호 변경 : s -->
+    <div class="modal md_sm modal_password_change">
+        <div class="modal_title">
+          <h4>비밀번호 변경</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('password_change')">
+        </div>
+        <div class="modal_container">
+            <ul class="input_ui">
+                <li>
+                    <label class="input_label">기존 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="기존 비밀번호를 입력해 주세요.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호 확인<span class="essential">*</span></label>
+                    <input type="password" placeholder="신규 비밀번호와 동일한 비밀번호를 입력.">
+                </li>
+                <li>
+                    <div class="modal_btn_wrap">
+                        <button class="btn_primary btn_lg">비밀번호 변경</button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_password_change" onclick="modal_close('password_change')"></div>
+    <!-- modal 비밀번호 변경 : e -->
+
+    <script>
+    // 캘린더 생성
+    document.addEventListener("DOMContentLoaded", function () {
+    const table = document.getElementById("scheduleTable");
+    const monthRow = document.getElementById("monthRow");
+
+    const years = [2025, 2026, 2027];
+    const months = Array.from({ length: 12 }, (_, i) => i + 1);
+
+    // 월 헤더 자동 생성
+    years.forEach(() => {
+        months.forEach((m) => {
+        const th = document.createElement("th");
+        th.className = "th_xs";
+        th.textContent = m;
+        monthRow.appendChild(th);
+        });
+    });
+
+    // 동적으로 전체 테이블 width 계산
+    const thCount = table.querySelectorAll("thead .th_xs").length;
+    const cellWidth = 30; // 각 월의 폭(px)
+    const baseWidth = 80; // 첫 번째 th (년도 or 항목명) 폭
+    const totalWidth = baseWidth + thCount * cellWidth;
+
+    table.style.width = totalWidth + "px";
+    });
+
+    //탭
+    var detail_tab = new Swiper(".detail_tab", {
+        slidesPerView: 'auto',
+        freeMode: true,
+        breakpointsInverse: true,
+    });
+
+    </script>
+
+
+    </body>
+</html>

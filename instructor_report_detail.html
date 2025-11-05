@@ -1,0 +1,195 @@
+<html lang="kor">
+<head>
+    <title>라플라스-상위 1%를 위한 지름길</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--메타 : 메타 태그만 사용-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/tailwindcss.js"></script>
+</head>
+
+  <body>
+    <div class="wrap">
+        <!-- side : s -->
+        <div class="side_wrap">
+            <div class="header_logo">
+                <a href="#"><img src="images/logo.png" class="img_logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu">
+                        <a href="schedule.html" class="depth_1"><span><img src="images/menu_ic_1.png"></span>스케줄</a>
+                    </li>
+                    <li class="menu">
+                        <a href="attendance_check.html" class="depth_1"><span><img src="images/menu_ic_2.png"></span>출석체크</a>
+                    </li>
+                    <li class="menu">
+                        <a href="schedule_management.html" class="depth_1"><span><img src="images/menu_ic_3.png"></span>학원 일정 관리</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_4.png"></span>학생 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="freshman.html" class="active">신입 학생 정보 관리</a></li>
+                            <li><a href="student_list.html">학생 정보 관리</a></li>
+                            <li><a href="attendance_list.html">학생 출석/하원 내역</a></li>
+                            <li><a href="student_counseling.html">학생 상담 일지</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="payment.html" class="depth_1"><span><img src="images/menu_ic_5.png"></span>결제 관리</a>
+                    </li>
+                    <li class="menu active">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_6.png"></span>강사 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="instructor.html">강사 정보 관리</a></li>
+                            <li><a href="instructor_attendance.html">강사 출퇴근 내역</a></li>
+                            <li><a href="instructor_report.html" class="active">수업 진행 보고서 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_7.png"></span>학습 관리 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="learning.html">학습 과정 관리</a></li>
+                            <li><a href="textbook.html">학습 교재 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="depth_1"><span><img src="images/menu_ic_8.png"></span>통계 <img src="images/arrow.png" class="ic_arrow"></a>
+                        <ul class="depth_2">
+                            <li><a href="statistics_sales.html">매출 통계</a></li>
+                            <li><a href="statistics_student.html">학생 통계</a></li>
+                            <li><a href="statistics_progress.html">진도/내신 통계</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="admin_management.html" class="depth_1"><span><img src="images/menu_ic_9.png"></span>관리자 관리</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- side : e -->
+        <div class="main_wrap">
+            <header>
+                <span class="ease"><img src="images/btn_setting.png" class="header_btn" onclick="modal_open('password_change')"></span>
+                <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
+            </header>
+            <main>
+                <div class="column_36 w_1000">
+                    <div class="page_tit">매일 수업 진행 보고서 상세</div>
+                    
+                    <table class="table_view">
+                        <colgroup>
+                            <col width="280">
+                            <col width="*">
+                            <col width="160">
+                            <col width="*">
+                        </colgroup>
+                        <tr>
+                            <th>수업일</th>
+                            <td>2025.06.01</td>
+                            <th>강사명</th>
+                            <td>김아무개</td>
+                        </tr>
+                        <tr>
+                            <th>금일 출석 인원</th>
+                            <td>10</td>
+                            <th>특강 개인별</th>
+                            <td>김학생, 이학생, 박학생</td>
+                        </tr>
+                        <tr>
+                            <th>오늘 학부모님께 상담요청</th>
+                            <td colspan="3">있음 / 학생명, 상담내용은 대략적으로 이렇 습니다. 학생명, 상담내용은 대략적으로 이렇 습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>라라일테 진행완료</th>
+                            <td colspan="3">일부 부족함 / 사유 : 모든 인원이 참석하지 않음</td>
+                        </tr>
+                        <tr>
+                            <th>숙제채점 + 오답 완성</th>
+                            <td colspan="3">일부 미완성 / 사유 : 모든 인원이 참석하지 않음</td>
+                        </tr>
+                        <tr>
+                            <th>수업 태도 우수학생과 칭찬 이유<br>( 반드시 한명이상)</th>
+                            <td colspan="3">김학생 / 집중력이 너무 높았음</td>
+                        </tr>
+                        <tr>
+                            <th>오늘 수업 분위기</th>
+                            <td colspan="3">집중도 높고 원할</td>
+                        </tr>
+                        <tr>
+                            <th>이번 주 토요일 숙제 보강 필요학생</th>
+                            <td colspan="3">있음 / 학생명, 학생명</td>
+                        </tr>
+                        <tr>
+                            <th>오늘 나의 티칭의 아쉬움/잘한점(반드시 기록)</th>
+                            <td colspan="3">아쉬움점 없음, 잘한점 없음</td>
+                        </tr>
+                    </table>
+
+                    <div class="btn_bottom">
+                        <a href="instructor_report.html" class="btn_primary btn_lg">목록</a>
+                    </div>
+
+                </div>
+                
+
+            </main>
+        </div>
+    </div>
+
+    <!-- modal 비밀번호 변경 : s -->
+    <div class="modal md_sm modal_password_change">
+        <div class="modal_title">
+          <h4>비밀번호 변경</h4>
+          <img src="images/header_btn_close.png" class="md_btn_close" onclick="modal_close('password_change')">
+        </div>
+        <div class="modal_container">
+            <ul class="input_ui">
+                <li>
+                    <label class="input_label">기존 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="기존 비밀번호를 입력해 주세요.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호<span class="essential">*</span></label>
+                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력.">
+                </li>
+                <li>
+                    <label class="input_label">새 비밀번호 확인<span class="essential">*</span></label>
+                    <input type="password" placeholder="신규 비밀번호와 동일한 비밀번호를 입력.">
+                </li>
+                <li>
+                    <div class="modal_btn_wrap">
+                        <button class="btn_primary btn_lg">비밀번호 변경</button>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md_overlay md_overlay_password_change" onclick="modal_close('password_change')"></div>
+    <!-- modal 비밀번호 변경 : s -->
+
+
+    </body>
+</html>
