@@ -1,0 +1,221 @@
+@import 'tailwindcss.css';
+
+.admin-sidebar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.admin-sidebar::-webkit-scrollbar {
+    display: none !important;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* swal alert */
+.swal2-title-custom {
+    font-size: 16px;
+}
+
+.datepicker-popper-on-modal {
+    z-index: 1000 !important;
+}
+
+.admin-action-dropdown {
+    min-width: 100px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* position, top, left, z-index는 인라인에서 지정 */
+}
+
+
+/* 에디터 CSS */
+.ck-toolbar {
+    flex: 0 0 auto;
+}
+
+.ck-content {
+    flex: 1 1 auto;
+    overflow: auto;
+    background-color: #ffffff;
+    height: 200px;
+}
+
+.ck-read-only {
+    padding: 0 !important;
+}
+
+.ck-content h1 {
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.ck-content h2 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.ck-content h3 {
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.ck-content h4 {
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.ck-content ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.ck-content ol {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.ck-content a:-webkit-any-link {
+    color: #38a5ee;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ck-content blockquote>p {
+    margin: 16px 0px;
+}
+
+.ck-editor__editable--resizable {
+    resize: vertical;
+    overflow: auto;
+}
+
+.admin-modal-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.admin-modal-close {
+    color: #374151;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.admin-modal-close:hover {
+    color: #374151;
+}
+
+.admin-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 48rem;
+}
+
+.admin-card-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.admin-card-inner {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem;
+}
+
+.admin-label {
+    color: #6b7280;
+    font-weight: 600;
+    width: 10rem;
+}
+
+.admin-value {
+    color: #111827;
+}
+
+.admin-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.admin-content {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    min-height: 60px;
+    color: #374151;
+}
+
+.admin-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 2rem;
+}
+
+.admin-image-thumb {
+    width: 5rem;
+    height: 5rem;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.admin-btn-search {
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: background 0.2s;
+}
+
+.admin-btn-search:hover {
+    background: #1d4ed8;
+}
