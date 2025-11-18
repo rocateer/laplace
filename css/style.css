@@ -79,9 +79,10 @@ main{background:#fff; border-radius:24px; padding: 36px; box-sizing: border-box;
 .min_list_wrap{width:100%; display: flex; gap: 16px;}
 .min_list_wrap > div{flex: 1; border: 1px solid var(--line-light); border-radius: 8px;}
 .min_list_wrap .tit_bar{border-bottom: 1px solid var(--line-light); display: flex; gap:10px; padding:10px 24px; color: var(--gray-900); font-family:'font-b'; font-size: 16px; align-items: center;}
-.min_list_wrap .min_list_body{height:85px; overflow-y: auto;}
-.min_list_wrap .min_row{display:flex; align-items: center; padding:8px 24px;}
+.min_list_wrap .min_list_body{height:65px; overflow-y: auto;}
+.min_list_wrap .min_row{display:flex; align-items: center; padding:4px 24px;}
 .min_list_wrap .min_row:hover{background:#f8f8f8;}
+.min_list_wrap .min_row .item_sm_wrap{font-size: 12px;}
 
 .schedule_wrap{border: 1px solid var(--line-light); border-radius: 8px;}
 .sch_legend{display:flex; justify-content: flex-end; gap: 16px; padding: 10px 16px; border-bottom: 1px solid var(--line-light);}
