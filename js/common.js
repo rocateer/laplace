@@ -67,6 +67,12 @@ $(function(){
     $(this).addClass("active");
   });
 
+  //멀티 드롭다운
+  $(document).on("click", ".multiple_select", function(e) {
+    e.stopPropagation();
+    $(this).toggleClass("active");
+  });
+
    //slide tab
   $(".slide_tab .swiper-slide").click(function() {
     $(this).siblings('.swiper-slide').removeClass("active");
