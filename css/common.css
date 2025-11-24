@@ -270,7 +270,7 @@ td.td_left, th.th_left{text-align: left !important;}
 td.td_center, th.th_center{text-align: center;}
 
 .table_list{border: 1px solid var(--line-light); table-layout: fixed; width: max-content; min-width:100%;}
-.table_list th,.table_list td{padding:10px 10px; border: 1px solid var(--line-light); text-align: center;}
+.table_list th,.table_list td{padding:7px 10px; border: 1px solid var(--line-light); text-align: center;}
 .table_list th.point_box,.table_list td.point_box{background:#EEF5F8;}
 .table_list thead th {color: var(--gray-400); font-size:14px;}
 .table_list tbody td {color: var(--gray-900); font-size:15px;}
