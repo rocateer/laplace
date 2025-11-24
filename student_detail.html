@@ -105,14 +105,14 @@
                             <col width="*">
                             <col width="140">
                             <col width="*">
+                            <col width="140">
+                            <col width="*">
                         </colgroup>
                         <tr>
                             <th><label class="input_label">학생이름<span class="essential">*</span></label></th>
                             <td><input type="text" placeholder=""></td>
                             <th><label class="input_label">전화번호<span class="essential">*</span></label></th>
                             <td><input type="text" placeholder=""></td>
-                        </tr>
-                        <tr>
                             <th><label class="input_label">성별<span class="essential">*</span></label></th>
                             <td>
                                 <div class="col_24">
@@ -126,10 +126,11 @@
                                     </div>
                                 </div>
                             </td>
-                            <th><label class="input_label">학교명<span class="essential">*</span></label></th>
-                            <td><input type="text" placeholder=""></td>
                         </tr>
                         <tr>
+                            
+                            <th><label class="input_label">학교명<span class="essential">*</span></label></th>
+                            <td><input type="text" placeholder=""></td>
                             <th><label class="input_label">학부모 연락처 1<br>(알림톡 발송)<span class="essential">*</span></label></th>
                             <td><input type="text" placeholder=""></td>
                             <th><label class="input_label">학부모 연락처 2</label></th>
@@ -189,8 +190,6 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
                             <th><label class="input_label">주소</label></th>
                             <td>
                                 <div class="group_c_8">
@@ -198,23 +197,77 @@
                                     <input type="text">
                                 </div>
                             </td>
+                        </tr>
+                        <tr>
                             <th><label class="input_label">메모</label></th>
                             <td>
                                 <textarea>에디터 삽입</textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label class="input_label">대학 입시 대비 <br>스케줄 확인</label></th>
-                            <td>
-                                <button class="btn_primary btn_md w_300">대학 입시 대비 스케줄 확인 하기</button>
                             </td>
                             <th><label class="input_label">상태</label></th>
                             <td>
                                 신입
                             </td>
+                            <th><label class="input_label">대학 입시 대비 <br>스케줄 확인</label></th>
+                            <td>
+                                <button class="btn_primary btn_md w_300">대학 입시 대비 스케줄 확인 하기</button>
+                            </td>
                         </tr>
                     </table>
                     <!-- 학생 상세 정보 : e -->
+
+                    <!-- 테스트 정보 : s -->
+                    <table class="table_view">
+                        <colgroup>
+                            <col width="140">
+                            <col width="*">
+                            <col width="140">
+                            <col width="*">
+                            <col width="140">
+                            <col width="*">
+                        </colgroup>
+                        <tr>
+                            <th><label class="input_label">테스트 날짜(상담일)</label></th>
+                            <td><input type="text" placeholder="" class="input_calendar"></td>
+                            <th><label class="input_label">테스트 범위</label></th>
+                            <td><input type="text" placeholder=""></td>
+                            <th><label class="input_label">테스트 시간</label></th>
+                            <td><input type="text" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">테스트 비용</label></th>
+                            <td><input type="text" placeholder=""></td>
+                            <th><label class="input_label">테스트 상태</label></th>
+                            <td>
+                                <div class="col_24">
+                                    <div>
+                                        <input type="radio" name="test" id="test_1">
+                                        <label for="test_1"><span></span>테스트 대기</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="test" id="test_2">
+                                        <label for="test_2"><span></span>테스트 완료</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th><label class="input_label">테스트 점수</label></th>
+                            <td><input type="text" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <th><label class="input_label">테스트 첨부<span class="essential">*</span></label></th>
+                            <td>
+                                <div class="group_c_8">
+                                    <label for="fileUpload1"><span class="btn_gray_line btn_sm pointer">첨부파일 등록</span></label>
+                                    <input type="file" id="fileUpload1" class="custom">
+                                    <div class="item_wrap">라플라스 신입생 테스트 문서.pdf <img src="images/btn_delete_sm.png" class="ic_16"></div>
+                                </div>
+                            </td>
+                            <th><label class="input_label">메모</label></th>
+                            <td><textarea></textarea></td>
+                            <th><label class="input_label">관리자<br>추가 상담 메모</label></th>
+                            <td><textarea></textarea></td>
+                        </tr>
+                    </table>
+                    <!-- 테스트 정보 : e -->
 
                     <div class="btn_bottom">
                         <button class="btn_primary_line btn_md">보류</button>

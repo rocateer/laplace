@@ -95,7 +95,7 @@
                 <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
             </header>
             <main>
-                <div class="column_36 w_1000">
+                <div class="group_c_24 w_1200">
                     <!-- 최근 7일 수업 진행보고서:: 관리자만 보는 화면 입니다. : s -->
                     <div class="report_state_wrap">
                         <div class="tit_div"><span class="tit">최근 7일 수업 진행보고서</span></div>
@@ -266,11 +266,37 @@
                         
                     </div>
 
-                    <div class="group_between">
+                    <div class="filter_row">
                         <div class="page_tit">스케줄</div>
+                        <span class="line_v"></span>
                         <div class="item_wrap">
-                            <div class="item_wrap">
-                                <div class="txt_1">마지막 보고서 작성일</div>
+                            <select class="w_100 md">
+                                <option>유재석</option>
+                                <option>김승옥</option>
+                            </select>
+                            <select class="w_100 md">
+                                <option>2025년</option>
+                                <option>2024년</option>
+                            </select>
+                            <select class="w_80 md">
+                                <option>7월</option>
+                                <option>6월</option>
+                            </select>
+                            <button class="btn_primary btn_sm">검색</button>
+                        </div>
+                        <span class="line_v"></span>
+                        <div class="item_wrap">
+                            <div>
+                                <b>TODAY</b> 2025.08.05 (화)
+                            </div>
+                            <button class="btn_gray_line primary btn_sm"><img src="images/ic_check_sm.png" class="ic_16">이번주</button>
+                            <button class="btn_gray_line btn_sm"><img src="images/arrow_prev.png" class="ic_16">이전</button>
+                            <button class="btn_gray_line btn_sm">다음<img src="images/arrow_next.png" class="ic_16"></button>
+                        </div>
+                        <span class="line_v"></span>
+                        <div class="item_wrap">
+                            <div class="">
+                                <div class="txt_1">마지막 보고서작성일</div>
                                 <div class="txt_date">2025.05.01</div>
                             </div>
                             <a href="report_reg.html" class="btn_primary_line btn_sm">작성</a>
@@ -279,33 +305,6 @@
                     
                     <!-- 스케줄 : s -->
                      <div class="group_c_24">
-                        <div class="group_between">
-                            <div class="item_wrap">
-                                <select class="w_100 md">
-                                    <option>유재석</option>
-                                    <option>김승옥</option>
-                                </select>
-                                <select class="w_100 md">
-                                    <option>2025년</option>
-                                    <option>2024년</option>
-                                </select>
-                                <select class="w_100 md">
-                                    <option>7월</option>
-                                    <option>6월</option>
-                                </select>
-                                <button class="btn_primary btn_sm">검색</button>
-                            </div>
-                            <div class="item_wrap">
-                                <div>
-                                    <b>TODAY</b> 2025.08.05 (화)
-                                </div>
-                                <button class="btn_gray_line primary btn_sm"><img src="images/ic_check_sm.png" class="ic_16">이번주</button>
-                                <span class="line_v"></span>
-                                <button class="btn_gray_line btn_sm"><img src="images/arrow_prev.png" class="ic_16">이전</button>
-                                <button class="btn_gray_line btn_sm">다음<img src="images/arrow_next.png" class="ic_16"></button>
-                            </div>
-                        </div>
-
                         <div class="schedule_wrap">
                             <div class="sch_legend">
                                 <div class="item_wrap">
