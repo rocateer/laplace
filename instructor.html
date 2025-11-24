@@ -95,50 +95,36 @@
                 <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
             </header>
             <main>
-                <div class="column_36 w_1000">
+                <div class="group_c_24 w_1000">
                     <div class="page_tit">강사 관리</div>
                     <!-- search : s -->
                     <div class="shadow_box group_c_24">
-                        <div class="gap_24">
-                            <div class="item_sm_wrap flex">
-                                <div class="w_100">아이디</div>
-                                <input type="text" class="flex">
+                        <div class="group_between col_16">
+                            <div class="item_wrap">
+                                <div>아이디</div>
+                                <input type="text" class="w_120">
+                            </div>
+                            <div class="item_wrap">
+                                <div>이름</div>
+                                <input type="text" class="w_120">
                             </div>
                             <div class="item_sm_wrap flex">
-                                <div class="w_100">이름</div>
-                                <input type="text" class="flex">
-                            </div>
-                        </div>
-                        <div class="gap_24">
-                            <div class="item_sm_wrap flex">
-                                <div class="w_100">가입일</div>
+                                <div>가입일</div>
                                 <div class="item_wrap flex">
                                     <input type="text" class="input_calendar flex">
                                     <span>~</span>
                                     <input type="text" class="input_calendar flex">
                                 </div>
                             </div>
-                            <div class="item_sm_wrap flex">
-                                <div class="w_100">상태</div>
-                                <div class="group_between flex">
-                                    <div class="col_24 flex">
-                                        <div>
-                                            <input type="radio" name="state" id="state_1" checked>
-                                            <label for="state_1"><span></span>전체</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" name="state" id="state_2">
-                                            <label for="state_2"><span></span>재직중</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" name="state" id="state_3">
-                                            <label for="state_3"><span></span>퇴사</label>
-                                        </div>
-                                    </div>
-                                    <button class="btn_primary btn_md">검색</button>
-                                </div>
-                                
+                            <div class="custom_select">
+                                <div class="selected">상태</div>
+                                <ul class="options">
+                                    <li>전체</li>
+                                    <li>재직중</li>
+                                    <li>퇴사</li>
+                                </ul>
                             </div>
+                            <button class="btn_primary btn_md">검색</button>
                         </div>
                     </div>
                     <!-- search : e -->
@@ -150,7 +136,6 @@
                             <div class="item_wrap">
                                 <button class="btn_primary btn_md" onclick="location.href='instructor_reg.html'"><img src="images/ic_plus.png">등록</button>
                             </div>
-                            
                         </div>
                         <table class="table_list">
                             <thead>
@@ -164,14 +149,70 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td>10</td>
                                     <td>rocateer@google.com</td>
                                     <td><a href="instructor_detail.html" class="link">유재석</a></td>
                                     <td>2025.09.02</td>
                                     <td><span class="chip_1">재직중</span></td>
                                 </tr>
                                 <tr>
+                                    <td>9</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
                                     <td>2</td>
+                                    <td>rocateer@google.com</td>
+                                    <td><a href="instructor_detail.html" class="link">조세호</a></td>
+                                    <td>2025.09.02</td>
+                                    <td><span class="chip_3">퇴사</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
                                     <td>rocateer@google.com</td>
                                     <td><a href="instructor_detail.html" class="link">조세호</a></td>
                                     <td>2025.09.02</td>
