@@ -95,116 +95,92 @@
                 <span class="ease"><img src="images/btn_logout.png" class="header_btn" onclick="location.href='login.html'"></span>
             </header>
             <main>
-                <div class="column_36 w_1000">
+                <div class="column_36 w_1200">
                     <div class="page_tit">학생 상담 일지</div>
                     <!-- search : s -->
-                    <div class="shadow_box group_c_24">
-                        <div class="gap_24">
-                            <div class="item_sm_wrap ">
-                                <div class="w_60">학생명</div>
-                                <input type="text" class="w_200">
+                    <div class="shadow_box">
+                        <div class="group_between">
+                            <div class="item_wrap">
+                                <div>학생명</div>
+                                <input type="text" class="w_120">
                             </div>
-                            <div class="item_sm_wrap ">
-                                <div class="w_60">작성자</div>
-                                <input type="text" class="w_200" placeholder="관리자 및 강사">
+                            <div class="item_wrap">
+                                <div>작성자</div>
+                                <input type="text" class="w_120" placeholder="관리자 및 강사">
                             </div>
-                            <div class="item_sm_wrap flex">
-                                <div class="w_60">등록일</div>
-                                <div class="item_wrap flex">
-                                    <input type="text" class="input_calendar flex">
-                                    ~
-                                    <input type="text" class="input_calendar flex">
-                                </div>
+                            <div class="item_wrap">
+                                <div>등록일</div>
+                                <input type="text" class="input_calendar w_140">
+                                <span>~</span>
+                                <input type="text" class="input_calendar w_140">
                             </div>
-                        </div>
-                        <div class="gap_24 group_between">
-                            <div class="item_sm_wrap flex">
-                                <div class="w_60">학력</div>
-                                <div class="row_6 flex">
-                                    <div>
+                            <div class="custom_select w_160">
+                                <div class="selected">구분</div>
+                                <ul class="options">
+                                    <li>신입생 상담</li>
+                                    <li>재원생 상담</li>
+                                    <li>퇴원 예감 긴급 보고서</li>
+                                    <li>퇴원 보고서</li>
+                                    <li>결석 보고서</li>
+                                </ul>
+                            </div>
+                            <div class="multiple_select w_140">
+                                <div class="selected">학력</div>
+                                <ul class="options">
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_1" value="Y">
                                         <label for="grade_1"><span></span>초등 1학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_2" value="Y">
                                         <label for="grade_2"><span></span>초등 2학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_3" value="Y">
                                         <label for="grade_3"><span></span>초등 3학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_4" value="Y">
                                         <label for="grade_4"><span></span>초등 4학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_5" value="Y">
                                         <label for="grade_5"><span></span>초등 5학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_6" value="Y">
                                         <label for="grade_6"><span></span>초등 6학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_7" value="Y">
                                         <label for="grade_7"><span></span>중등 1학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_8" value="Y">
                                         <label for="grade_8"><span></span>중등 2학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_9" value="Y">
                                         <label for="grade_9"><span></span>중등 3학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_10" value="Y">
                                         <label for="grade_10"><span></span>고등 1학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_11" value="Y">
                                         <label for="grade_11"><span></span>고등 2학년</label>
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li>
                                         <input type="checkbox" name="grade" id="grade_12" value="Y">
                                         <label for="grade_12"><span></span>고등 3학년</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gap_24 group_between">
-                            <div class="item_sm_wrap flex">
-                                <div class="w_60">구분</div>
-                                <div class="col_24">
-                                    <div>
-                                        <input type="checkbox" name="sort" id="sort_1" value="Y">
-                                        <label for="sort_1"><span></span>신입생 상담</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="sort" id="sort_2" value="Y">
-                                        <label for="sort_2"><span></span>재원생 상담</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="sort" id="sort_3" value="Y">
-                                        <label for="sort_3"><span></span>퇴원 예감 긴급 보고서</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="sort" id="sort_4" value="Y">
-                                        <label for="sort_4"><span></span>퇴원 보고서</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="sort" id="sort_5" value="Y">
-                                        <label for="sort_5"><span></span>결석 보고서</label>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                             <button class="btn_primary btn_md">검색</button>
                         </div>
-                        
-                        
                     </div>
                     <!-- search : e -->
-
 
                     <div class="group_c_16">
                         <div class="group_between">
@@ -224,7 +200,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td>10</td>
                                     <td>홍길동</td>
                                     <td>초등 1학년</td>
                                     <td><a href="counseling_freshman.html" class="link">신입생 상담</a></td>
@@ -232,7 +208,7 @@
                                     <td>2025.09.02</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
+                                    <td>9</td>
                                     <td>홍길동</td>
                                     <td>초등 1학년</td>
                                     <td><a href="counseling_graduate.html" class="link">재원생 상담</a></td>
@@ -240,7 +216,7 @@
                                     <td>2025.09.02</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
+                                    <td>8</td>
                                     <td>홍길동</td>
                                     <td>초등 1학년</td>
                                     <td><a href="report_urgent_out.html" class="link">퇴원 예감 긴급 보고서</a></td>
@@ -248,10 +224,50 @@
                                     <td>2025.09.02</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
+                                    <td>7</td>
                                     <td>홍길동</td>
                                     <td>초등 1학년</td>
                                     <td><a href="report_out.html" class="link">퇴원보고서</a></td>
+                                    <td>홍길동</td>
+                                    <td>2025.09.02</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>홍길동</td>
+                                    <td>초등 1학년</td>
+                                    <td><a href="report_absent.html" class="link">결석 보고서</a></td>
+                                    <td>홍길동</td>
+                                    <td>2025.09.02</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>홍길동</td>
+                                    <td>초등 1학년</td>
+                                    <td><a href="report_absent.html" class="link">결석 보고서</a></td>
+                                    <td>홍길동</td>
+                                    <td>2025.09.02</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>홍길동</td>
+                                    <td>초등 1학년</td>
+                                    <td><a href="report_absent.html" class="link">결석 보고서</a></td>
+                                    <td>홍길동</td>
+                                    <td>2025.09.02</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>홍길동</td>
+                                    <td>초등 1학년</td>
+                                    <td><a href="report_absent.html" class="link">결석 보고서</a></td>
+                                    <td>홍길동</td>
+                                    <td>2025.09.02</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>홍길동</td>
+                                    <td>초등 1학년</td>
+                                    <td><a href="report_absent.html" class="link">결석 보고서</a></td>
                                     <td>홍길동</td>
                                     <td>2025.09.02</td>
                                 </tr>
